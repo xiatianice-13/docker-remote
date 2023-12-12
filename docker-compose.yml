@@ -1,0 +1,12 @@
+version: '3'
+services:
+  demo:
+    image: demo:0.0.1
+    container_name: demo
+    restart: always
+    volumes:
+      - /usr/local/water
+    working_dir: /usr/local/water
+    command: ["java", "-jar", "demo.jar"]
+    ports:
+      - '9999:8888'
